@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+      "declaration": true,
+      "resolveJsonModule": true,
+      "esModuleInterop": true,
+      "inlineSources": true,
+      "lib": [
+        "ES2020"
+      ],
+      "module": "CommonJS",
+      "moduleResolution": "Node",
+      "outDir": "dist",
+      "rootDir": "",
+      "sourceMap": true,
+      "target": "ES2017",
+      "typeRoots": [
+        "./node_modules/@types"
+      ]
+    },
+    "include": [
+      "**/*.ts"
+    ],
+}
