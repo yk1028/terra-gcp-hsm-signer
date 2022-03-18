@@ -3,7 +3,7 @@ import { KeyManagementServiceClient } from "@google-cloud/kms";
 import { GcpHsmKey } from './GcpHsmKey';
 import { GcpHsmSigner } from './GcpHsmSigner';
 
-import * as secret from './.secret.json';
+import * as secret from '../.secret.json';
 
 const terra = new LCDClient({
 	URL: 'https://bombay-lcd.terra.dev',
