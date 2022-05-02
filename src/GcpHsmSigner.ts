@@ -50,8 +50,8 @@ export class GcpHsmSigner {
     return compressedPubkey;
   }
 
-  public async sign(plaintext: Buffer): Promise<Buffer> {
-    const response = await this.kmsAsymmetricSign(plaintext);
+  public async sign(digest: Buffer): Promise<Buffer> {
+    const response = await this.kmsAsymmetricSign(digest);
     if (!response || !response.signature) {
       throw new Error(`GCP KMS call failed`);
     }
