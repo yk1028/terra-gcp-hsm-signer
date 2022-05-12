@@ -24,9 +24,9 @@ const sendLuna = async () => {
 		secret.gcpInfo.keyId,
 		secret.gcpInfo.versionId
 	);
-	const gcpHsmUtils = new GcpHsmSigner(kms, versionName);
-	const pubkey = await gcpHsmUtils.getPublicKey();
-	const gcpHsmKey: Key = new GcpHsmKey(gcpHsmUtils, pubkey);
+	const gcpHsmSigner = new GcpHsmSigner(kms, versionName);
+	const pubkey = await gcpHsmSigner.getPublicKey();
+	const gcpHsmKey: Key = new GcpHsmKey(gcpHsmSigner, pubkey);
 
 	console.log(mnemonicKey.publicKey)
 	console.log(gcpHsmKey.publicKey);
